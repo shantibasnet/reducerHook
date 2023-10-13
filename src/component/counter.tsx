@@ -1,15 +1,10 @@
 import { useReducer } from 'react';
 import "./counter.css"
+import { IAction, IState } from '../types/type';
 
 function Counter() {
 
-    interface IState{
-        count:number
-    }
-
-    interface IAction{
-        type: 'INCREMENT' |'DECREMENT'
-    }
+   
     
     const counterReducer = (state:IState, action:IAction) => {
         switch (action.type) {
